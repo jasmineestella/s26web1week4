@@ -22,9 +22,44 @@
     </nav>
     <main>
         <!-- HTML forms let users enter information into your site-->
-         <form>
+         <!--form requires two attributes to tell them how to submit:
+         action tells the form where to go. method tells the form how to send the information
+         the post method send the info in an encrypted package. the get method sends the info unencrypted to the browser-->
+         <form action="contact.html" method="get">
+            <section>
             <label for="name">Name:</label>
-            <input id="name" type="text">
+            <input id="name" type="text" name="name">
+            <!--with input you can specify different types-->
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email">
+            </section>
+            <!-- the sections are block elements, so these form elements will appear on the next line-->
+             <section>
+                <label for="pass">Password:</label>
+                <input id="pass" type="password" name="pass">
+
+                <label for="when">Birthdate:</label>
+                <input id="when" type="date" name="when">
+                <!--for the number field you can set a min and max number of items-->
+                <label for="how">How many?</label>
+                <input id="how" type="number" min="10" max="50" name="how">
+             </section>
+
+             <section>
+                <!--to make a drop down menu-->
+                <label for="colours">colour?</label>
+                <select id="colours" name="colours">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+
+             </section>
+             
+             <section>
+                <!-- to submit a form add submit button this will submit everything in the form-->
+                 <input type="submit" value="submit form">
+             </section>
          </form>
         
     </main>
